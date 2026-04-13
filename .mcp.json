@@ -1,0 +1,24 @@
+{
+  "name": "hr-management-ai-mcp",
+  "description": "MEOK AI Labs \u2014 Human resources toolkit for AI agents: leave calculation, payroll estimation,",
+  "vendor": "MEOK AI Labs",
+  "homepage": "https://meok.ai",
+  "repository": "https://github.com/CSOAI-ORG/hr-management-ai-mcp",
+  "runtime": "python",
+  "entrypoint": "server.py",
+  "tools": [
+    "leave_calculator",
+    "payroll_estimator",
+    "performance_review",
+    "onboarding_checklist",
+    "compliance_checker"
+  ],
+  "categories": [
+    "HR",
+    "Business"
+  ],
+  "pricing": {
+    "free": "50 calls/day",
+    "pro": "$9/mo"
+  }
+}

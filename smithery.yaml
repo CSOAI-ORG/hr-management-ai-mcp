@@ -1,0 +1,10 @@
+name: hr-management-ai-mcp
+description: "MEOK AI Labs — Human resources toolkit for AI agents: leave calculation, payroll estimation,"
+vendor: MEOK AI Labs
+homepage: https://meok.ai
+repository: https://github.com/CSOAI-ORG/hr-management-ai-mcp
+license: MIT
+categories: [HR, Business]
+tags: [hr, human-resources, employee-management, payroll, recruitment]
+runtime: python
+entrypoint: server.py
