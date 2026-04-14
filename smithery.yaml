@@ -1,10 +1,90 @@
 name: hr-management-ai-mcp
-description: "MEOK AI Labs — Human resources toolkit for AI agents: leave calculation, payroll estimation,"
-vendor: MEOK AI Labs
-homepage: https://meok.ai
-repository: https://github.com/CSOAI-ORG/hr-management-ai-mcp
-license: MIT
-categories: [HR, Business]
-tags: [hr, human-resources, employee-management, payroll, recruitment]
-runtime: python
-entrypoint: server.py
+description: '**By MEOK AI Labs** | [meok.ai](https://meok.ai)'
+version: 1.0.0
+tools:
+- name: leave_calculator
+  description: Calculate leave balance, accrual rate, and year-end projections based
+    on
+  parameters:
+  - name: employee_start_date
+    type: string
+    required: true
+  - name: region
+    type: string
+    required: false
+  - name: leave_type
+    type: string
+    required: false
+  - name: days_taken
+    type: integer
+    required: false
+  - name: custom_allowance
+    type: integer
+    required: false
+- name: payroll_estimator
+  description: Estimate net pay with tax brackets, Social Security, Medicare, retirement
+  parameters:
+  - name: annual_salary
+    type: number
+    required: true
+  - name: region
+    type: string
+    required: false
+  - name: pay_frequency
+    type: string
+    required: false
+  - name: retirement_pct
+    type: number
+    required: false
+  - name: health_deduction
+    type: number
+    required: false
+- name: performance_review
+  description: Draft a structured performance review with tier assessment, strengths,
+  parameters:
+  - name: employee_name
+    type: string
+    required: true
+  - name: role
+    type: string
+    required: true
+  - name: period
+    type: string
+    required: true
+  - name: ratings
+    type: object
+    required: false
+  - name: goals_met
+    type: integer
+    required: false
+  - name: goals_total
+    type: integer
+    required: false
+- name: onboarding_checklist
+  description: Generate a phased onboarding checklist covering pre-start through 90
+    days
+  parameters:
+  - name: role
+    type: string
+    required: true
+  - name: department
+    type: string
+    required: true
+  - name: start_date
+    type: string
+    required: true
+  - name: remote
+    type: boolean
+    required: false
+- name: compliance_checker
+  description: Check applicable employment compliance frameworks based on region,
+  parameters:
+  - name: region
+    type: string
+    required: false
+  - name: company_size
+    type: integer
+    required: false
+  - name: topics
+    type: array
+    required: false

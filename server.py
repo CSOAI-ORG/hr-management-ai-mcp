@@ -11,6 +11,11 @@ Install: pip install mcp
 Run:     python server.py
 """
 
+
+import sys, os
+sys.path.insert(0, os.path.expanduser('~/clawd/meok-labs-engine/shared'))
+from auth_middleware import check_access
+
 import math
 import re
 from collections import defaultdict
@@ -416,7 +421,7 @@ mcp = FastMCP(
 @mcp.tool()
 def leave_calculator(employee_start_date: str, region: str = "US",
                      leave_type: str = "annual", days_taken: int = 0,
-                     custom_allowance: int = 0) -> dict:
+                     custom_allowance: int = 0, api_key: str = "") -> dict:
     """Calculate leave balance, accrual rate, and year-end projections based on
     region-specific policies and employee tenure.
 
@@ -427,6 +432,10 @@ def leave_calculator(employee_start_date: str, region: str = "US",
         days_taken: Days already taken this year
         custom_allowance: Override default allowance (0 = use policy default)
     """
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     err = _check_rate_limit()
     if err:
         return {"error": err}
@@ -440,7 +449,7 @@ def leave_calculator(employee_start_date: str, region: str = "US",
 def payroll_estimator(annual_salary: float, region: str = "US",
                       pay_frequency: str = "monthly",
                       retirement_pct: float = 6.0,
-                      health_deduction: float = 250.0) -> dict:
+                      health_deduction: float = 250.0, api_key: str = "") -> dict:
     """Estimate net pay with tax brackets, Social Security, Medicare, retirement
     contributions, and health insurance deductions.
 
@@ -451,6 +460,10 @@ def payroll_estimator(annual_salary: float, region: str = "US",
         retirement_pct: 401k/pension contribution percentage
         health_deduction: Health insurance deduction per pay period
     """
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     err = _check_rate_limit()
     if err:
         return {"error": err}
@@ -463,7 +476,7 @@ def payroll_estimator(annual_salary: float, region: str = "US",
 @mcp.tool()
 def performance_review(employee_name: str, role: str, period: str,
                        ratings: dict = {}, goals_met: int = 0,
-                       goals_total: int = 5) -> dict:
+                       goals_total: int = 5, api_key: str = "") -> dict:
     """Draft a structured performance review with tier assessment, strengths,
     development areas, and next steps.
 
@@ -475,6 +488,10 @@ def performance_review(employee_name: str, role: str, period: str,
         goals_met: Number of goals achieved
         goals_total: Total goals set for the period
     """
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     err = _check_rate_limit()
     if err:
         return {"error": err}
@@ -486,7 +503,7 @@ def performance_review(employee_name: str, role: str, period: str,
 
 @mcp.tool()
 def onboarding_checklist(role: str, department: str, start_date: str,
-                         remote: bool = False) -> dict:
+                         remote: bool = False, api_key: str = "") -> dict:
     """Generate a phased onboarding checklist covering pre-start through 90 days
     with task ownership assignments.
 
@@ -496,6 +513,10 @@ def onboarding_checklist(role: str, department: str, start_date: str,
         start_date: Start date (YYYY-MM-DD)
         remote: Whether the employee is remote
     """
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     err = _check_rate_limit()
     if err:
         return {"error": err}
@@ -507,7 +528,7 @@ def onboarding_checklist(role: str, department: str, start_date: str,
 
 @mcp.tool()
 def compliance_checker(region: str = "US", company_size: int = 50,
-                       topics: list[str] = []) -> dict:
+                       topics: list[str] = [], api_key: str = "") -> dict:
     """Check applicable employment compliance frameworks based on region,
     company size, and specific topics of concern.
 
@@ -516,6 +537,10 @@ def compliance_checker(region: str = "US", company_size: int = 50,
         company_size: Number of employees
         topics: Specific compliance topics to check (e.g. ["minimum_wage", "data_privacy", "discrimination"])
     """
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     err = _check_rate_limit()
     if err:
         return {"error": err}

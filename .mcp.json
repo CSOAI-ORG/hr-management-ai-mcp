@@ -1,24 +1,141 @@
 {
   "name": "hr-management-ai-mcp",
-  "description": "MEOK AI Labs \u2014 Human resources toolkit for AI agents: leave calculation, payroll estimation,",
-  "vendor": "MEOK AI Labs",
-  "homepage": "https://meok.ai",
-  "repository": "https://github.com/CSOAI-ORG/hr-management-ai-mcp",
-  "runtime": "python",
-  "entrypoint": "server.py",
+  "description": "**By MEOK AI Labs** | [meok.ai](https://meok.ai)",
+  "version": "1.0.0",
   "tools": [
-    "leave_calculator",
-    "payroll_estimator",
-    "performance_review",
-    "onboarding_checklist",
-    "compliance_checker"
-  ],
-  "categories": [
-    "HR",
-    "Business"
-  ],
-  "pricing": {
-    "free": "50 calls/day",
-    "pro": "$9/mo"
-  }
+    {
+      "name": "leave_calculator",
+      "description": "Calculate leave balance, accrual rate, and year-end projections based on",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "employee_start_date": {
+            "type": "string"
+          },
+          "region": {
+            "type": "string"
+          },
+          "leave_type": {
+            "type": "string"
+          },
+          "days_taken": {
+            "type": "integer"
+          },
+          "custom_allowance": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "employee_start_date"
+        ]
+      }
+    },
+    {
+      "name": "payroll_estimator",
+      "description": "Estimate net pay with tax brackets, Social Security, Medicare, retirement",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "annual_salary": {
+            "type": "number"
+          },
+          "region": {
+            "type": "string"
+          },
+          "pay_frequency": {
+            "type": "string"
+          },
+          "retirement_pct": {
+            "type": "number"
+          },
+          "health_deduction": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "annual_salary"
+        ]
+      }
+    },
+    {
+      "name": "performance_review",
+      "description": "Draft a structured performance review with tier assessment, strengths,",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "employee_name": {
+            "type": "string"
+          },
+          "role": {
+            "type": "string"
+          },
+          "period": {
+            "type": "string"
+          },
+          "ratings": {
+            "type": "object"
+          },
+          "goals_met": {
+            "type": "integer"
+          },
+          "goals_total": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "employee_name",
+          "role",
+          "period"
+        ]
+      }
+    },
+    {
+      "name": "onboarding_checklist",
+      "description": "Generate a phased onboarding checklist covering pre-start through 90 days",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "role": {
+            "type": "string"
+          },
+          "department": {
+            "type": "string"
+          },
+          "start_date": {
+            "type": "string"
+          },
+          "remote": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "role",
+          "department",
+          "start_date"
+        ]
+      }
+    },
+    {
+      "name": "compliance_checker",
+      "description": "Check applicable employment compliance frameworks based on region,",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "region": {
+            "type": "string"
+          },
+          "company_size": {
+            "type": "integer"
+          },
+          "topics": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": []
+      }
+    }
+  ]
 }
