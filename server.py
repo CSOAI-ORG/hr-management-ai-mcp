@@ -410,8 +410,7 @@ def _compliance_checker(region: str, company_size: int, topics: list[str]) -> di
 # ---------------------------------------------------------------------------
 mcp = FastMCP(
     "HR Management AI MCP",
-    instructions="Human resources toolkit: leave calculation, payroll estimation, performance reviews, onboarding checklists, and compliance checking. By MEOK AI Labs.",
-)
+    instructions="Human resources toolkit: leave calculation, payroll estimation, performance reviews, onboarding checklists, and compliance checking. By MEOK AI Labs.")
 
 
 @mcp.tool()
