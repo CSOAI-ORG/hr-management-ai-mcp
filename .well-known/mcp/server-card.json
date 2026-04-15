@@ -1,0 +1,58 @@
+{
+  "name": "HR Management AI MCP",
+  "description": "Human resources toolkit: leave calculation, payroll estimation, performance reviews, onboarding checklists, and compliance checking. By MEOK AI Labs.",
+  "version": "1.0.0",
+  "protocol_version": "2025-11-25",
+  "publisher": {
+    "name": "MEOK AI Labs",
+    "url": "https://meok.ai",
+    "email": "nicholas@meok.ai"
+  },
+  "repository": "https://github.com/CSOAI-ORG/hr-management-ai-mcp",
+  "license": "MIT",
+  "transport": [
+    "stdio",
+    "streamable-http"
+  ],
+  "authentication": {
+    "type": "api-key",
+    "free_tier": true,
+    "free_limit": "15 calls/day"
+  },
+  "tools": [
+    {
+      "name": "leave_calculator",
+      "description": "Calculate leave balance, accrual rate, and year-end projections based on"
+    },
+    {
+      "name": "payroll_estimator",
+      "description": "Estimate net pay with tax brackets, Social Security, Medicare, retirement"
+    },
+    {
+      "name": "performance_review",
+      "description": "Draft a structured performance review with tier assessment, strengths,"
+    },
+    {
+      "name": "onboarding_checklist",
+      "description": "Generate a phased onboarding checklist covering pre-start through 90 days"
+    },
+    {
+      "name": "compliance_checker",
+      "description": "Check applicable employment compliance frameworks based on region,"
+    }
+  ],
+  "categories": [
+    "AI & Machine Learning",
+    "Productivity",
+    "Security & Compliance"
+  ],
+  "pricing": {
+    "free": {
+      "calls_per_day": 15
+    },
+    "pro": {
+      "price": "$29/month",
+      "url": "https://meok.ai/pricing"
+    }
+  }
+}
