@@ -1,6 +1,6 @@
 {
   "name": "hr-management-ai-mcp",
-  "description": "**By MEOK AI Labs** | [meok.ai](https://meok.ai)",
+  "description": "> **By [MEOK AI Labs](https://meok.ai)** \u2014 Human resources toolkit: leave calculation, payroll estimation, performance reviews, onboarding chec",
   "version": "1.0.0",
   "tools": [
     {
@@ -128,10 +128,7 @@
             "type": "integer"
           },
           "topics": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
+            "type": "array"
           }
         },
         "required": []
