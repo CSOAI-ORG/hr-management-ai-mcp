@@ -1,6 +1,6 @@
 {
   "name": "hr-management-ai-mcp",
-  "description": "> **By [MEOK AI Labs](https://meok.ai)** \u2014 Human resources toolkit: leave calculation, payroll estimation, performance reviews, onboarding chec",
+  "description": "Hr Management Ai MCP server. Tools: leave calculator, payroll estimator, performance review. Built by MEOK AI Labs.",
   "version": "1.0.0",
   "tools": [
     {
