@@ -1,53 +1,38 @@
-# HR Management AI MCP Server
-**By MEOK AI Labs** | [meok.ai](https://meok.ai)
+<div align="center">
 
-Human resources toolkit: leave calculation, payroll estimation, performance reviews, onboarding checklists, and compliance checking.
+[![GitHub stars](https://img.shields.io/github/stars/CSOAI-ORG/hr-management-ai-mcp)](https://github.com/CSOAI-ORG/hr-management-ai-mcp/stargazers)
 
-## Tools
+# uhrU managementU aiU mcp
 
-| Tool | Description |
-|------|-------------|
-| `leave_calculator` | Calculate leave balance with regional policies and tenure bonuses |
-| `payroll_estimator` | Net pay estimation with tax brackets and deductions |
-| `performance_review` | Structured performance review with tier assessment |
-| `onboarding_checklist` | Phased onboarding checklist from pre-start through 90 days |
-| `compliance_checker` | Check applicable employment compliance frameworks |
+****By MEOK AI Labs** | [meok.ai](https://meok.ai)**
+
+[![npm version](https://img.shields.io/npm/v/@meok-ai/hr-management-ai-mcp)](https://www.npmjs.com/package/@meok-ai/hr-management-ai-mcp)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![MEOK AI Labs](https://img.shields.io/badge/MEOK_AI_Labs-255+_servers-purple)](https://meok.ai)
+
+[Installation](#installation) · [Docs](https://csoai.org) · [Report Bug](https://github.com/CSOAI-ORG/hr-management-ai-mcp/issues)
+
+</div>
+
+---
 
 ## Installation
 
 ```bash
-pip install mcp
+pip install hr-management-ai-mcp
+# or
+npm install -g @meok-ai/hr-management-ai-mcp
 ```
 
-## Usage
+## Quick Start
 
-### Run the server
+See the project repository for full documentation and examples.
 
-```bash
-python server.py
-```
+## Enterprise Support
 
-### Claude Desktop config
-
-```json
-{
-  "mcpServers": {
-    "hr-management": {
-      "command": "python",
-      "args": ["/path/to/hr-management-ai-mcp/server.py"]
-    }
-  }
-}
-```
-
-## Pricing
-
-| Tier | Limit | Price |
-|------|-------|-------|
-| Free | 30 calls/day | $0 |
-| Pro | Unlimited + premium features | $9/mo |
-| Enterprise | Custom + SLA + support | Contact us |
+- 📧 nicholas@csoai.org
+- 🌐 [CSOAI.org](https://csoai.org)
 
 ## License
 
-MIT
+MIT © [CSOAI](https://csoai.org)
