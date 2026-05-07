@@ -1,3 +1,5 @@
+[![hr-management-ai-mcp MCP server](https://glama.ai/mcp/servers/CSOAI-ORG/hr-management-ai-mcp/badges/card.svg)](https://glama.ai/mcp/servers/CSOAI-ORG/hr-management-ai-mcp)
+
 <div align="center">
 
 [![GitHub stars](https://img.shields.io/github/stars/CSOAI-ORG/hr-management-ai-mcp)](https://github.com/CSOAI-ORG/hr-management-ai-mcp/stargazers)
