@@ -431,6 +431,21 @@ def leave_calculator(employee_start_date: str, region: str = "US",
         leave_type: Type of leave (annual, sick, personal, parental, bereavement)
         days_taken: Days already taken this year
         custom_allowance: Override default allowance (0 = use policy default)
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
@@ -459,6 +474,21 @@ def payroll_estimator(annual_salary: float, region: str = "US",
         pay_frequency: Pay period (weekly, biweekly, semimonthly, monthly)
         retirement_pct: 401k/pension contribution percentage
         health_deduction: Health insurance deduction per pay period
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
@@ -487,6 +517,20 @@ def performance_review(employee_name: str, role: str, period: str,
         ratings: Category scores 1-5 as {category: score}. Categories: technical_skills, communication, leadership, initiative, teamwork, reliability, creativity, time_management
         goals_met: Number of goals achieved
         goals_total: Total goals set for the period
+
+    Behavior:
+        This tool generates structured output without modifying external systems.
+        Output is deterministic for identical inputs. No side effects.
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
@@ -512,6 +556,20 @@ def onboarding_checklist(role: str, department: str, start_date: str,
         department: Department name (e.g. Engineering, Sales, Marketing)
         start_date: Start date (YYYY-MM-DD)
         remote: Whether the employee is remote
+
+    Behavior:
+        This tool generates structured output without modifying external systems.
+        Output is deterministic for identical inputs. No side effects.
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
@@ -536,6 +594,21 @@ def compliance_checker(region: str = "US", company_size: int = 50,
         region: Jurisdiction (US, UK, EU, AU, CA, or ALL)
         company_size: Number of employees
         topics: Specific compliance topics to check (e.g. ["minimum_wage", "data_privacy", "discrimination"])
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
