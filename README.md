@@ -1,45 +1,59 @@
-[![hr-management-ai-mcp MCP server](https://glama.ai/mcp/servers/CSOAI-ORG/hr-management-ai-mcp/badges/score.svg)](https://glama.ai/mcp/servers/CSOAI-ORG/hr-management-ai-mcp)
-[![MCP Registry](https://img.shields.io/badge/MCP_Registry-Published-green)](https://registry.modelcontextprotocol.io)
-[![PyPI](https://img.shields.io/pypi/v/hr-management-ai-mcp)](https://pypi.org/project/hr-management-ai-mcp/)
-
-[![hr-management-ai-mcp MCP server](https://glama.ai/mcp/servers/CSOAI-ORG/hr-management-ai-mcp/badges/card.svg)](https://glama.ai/mcp/servers/CSOAI-ORG/hr-management-ai-mcp)
-
 <div align="center">
 
-[![GitHub stars](https://img.shields.io/github/stars/CSOAI-ORG/hr-management-ai-mcp)](https://github.com/CSOAI-ORG/hr-management-ai-mcp/stargazers)
+# Hr Management Ai MCP
 
-# uhrU managementU aiU mcp
+**MCP server for hr management ai mcp operations**
 
-****By MEOK AI Labs** | [meok.ai](https://meok.ai)**
-
-[![npm version](https://img.shields.io/npm/v/@meok-ai/hr-management-ai-mcp)](https://www.npmjs.com/package/@meok-ai/hr-management-ai-mcp)
+[![PyPI](https://img.shields.io/pypi/v/meok-hr-management-ai-mcp)](https://pypi.org/project/meok-hr-management-ai-mcp/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![MEOK AI Labs](https://img.shields.io/badge/MEOK_AI_Labs-255+_servers-purple)](https://meok.ai)
-
-[Installation](#installation) · [Docs](https://csoai.org) · [Report Bug](https://github.com/CSOAI-ORG/hr-management-ai-mcp/issues)
+[![MEOK AI Labs](https://img.shields.io/badge/MEOK_AI_Labs-MCP_Server-purple)](https://meok.ai)
 
 </div>
 
----
+## Overview
+
+Hr Management Ai MCP provides AI-powered tools via the Model Context Protocol (MCP).
+
+## Tools
+
+| Tool | Description |
+|------|-------------|
+| `leave_calculator` | Calculate leave balance, accrual rate, and year-end projections based on |
+| `payroll_estimator` | Estimate net pay with tax brackets, Social Security, Medicare, retirement |
+| `performance_review` | Draft a structured performance review with tier assessment, strengths, |
+| `onboarding_checklist` | Generate a phased onboarding checklist covering pre-start through 90 days |
+| `compliance_checker` | Check applicable employment compliance frameworks based on region, |
 
 ## Installation
 
 ```bash
-pip install hr-management-ai-mcp
-# or
-npm install -g @meok-ai/hr-management-ai-mcp
+pip install meok-hr-management-ai-mcp
 ```
 
-## Quick Start
+## Usage with Claude Desktop
 
-See the project repository for full documentation and examples.
+Add to your Claude Desktop MCP config (`claude_desktop_config.json`):
 
-## Enterprise Support
+```json
+{
+  "mcpServers": {
+    "hr-management-ai-mcp": {
+      "command": "python",
+      "args": ["-m", "meok_hr_management_ai_mcp.server"]
+    }
+  }
+}
+```
 
-- 📧 nicholas@csoai.org
-- 🌐 [CSOAI.org](https://csoai.org)
+## Usage with FastMCP
+
+```python
+from mcp.server.fastmcp import FastMCP
+
+# This server exposes 5 tool(s) via MCP
+# See server.py for full implementation
+```
 
 ## License
 
-MIT © [CSOAI](https://csoai.org)
-<!-- mcp-name: io.github.CSOAI-ORG/hr-management-ai-mcp -->
+MIT © [MEOK AI Labs](https://meok.ai)
