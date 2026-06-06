@@ -1,0 +1,28 @@
+{
+  "name": "hr-management-ai-mcp",
+  "title": "Hr Management Ai Mcp",
+  "description": "Hr Management Ai MCP server. Tools: leave calculator, payroll estimator, performance review. Built by MEOK AI Labs.",
+  "version": "1.0.6",
+  "homepage": "https://meok.ai",
+  "license": "MIT",
+  "transport": {
+    "type": "stdio"
+  },
+  "tools": [
+    {
+      "name": "leave_calculator"
+    },
+    {
+      "name": "payroll_estimator"
+    },
+    {
+      "name": "performance_review"
+    },
+    {
+      "name": "onboarding_checklist"
+    },
+    {
+      "name": "compliance_checker"
+    }
+  ]
+}

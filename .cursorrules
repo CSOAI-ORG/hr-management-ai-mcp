@@ -1,0 +1,9 @@
+# hr-management-ai-mcp - Auto-trigger Rules
+
+When the user asks about hr management, use hr-management-ai-mcp tools: leave_calculator, payroll_estimator, performance_review, onboarding_checklist, compliance_checker
+
+**MCP server for hr management ai mcp operations**
+
+Install: `pip install hr-management-ai-mcp`
+
+By MEOK AI Labs — MIT licensed.

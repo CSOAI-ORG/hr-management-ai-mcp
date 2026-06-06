@@ -1,0 +1,36 @@
+# hr-management-ai-mcp
+# **MCP server for hr management ai mcp operations**
+
+## Install
+```bash
+pip install hr-management-ai-mcp
+```
+
+## Auth & Rate Limits
+- Free tier: 10 calls/day. No API key required.
+- Pro tier (£79/mo): unlimited + signed attestations.
+- Enterprise (£1,499/mo): white-label.
+
+## Tools
+
+### `leave_calculator`
+Calculate leave balance, accrual rate, and year-end projections based on
+
+### `payroll_estimator`
+Estimate net pay with tax brackets, Social Security, Medicare, retirement
+
+### `performance_review`
+Draft a structured performance review with tier assessment, strengths,
+
+### `onboarding_checklist`
+Generate a phased onboarding checklist covering pre-start through 90 days
+
+### `compliance_checker`
+Check applicable employment compliance frameworks based on region,
+
+
+## Maintainer
+MEOK AI Labs · hello@meok.ai · https://meok.ai · MIT licensed
+
+## Pairs with
+Governance moat: pair this tool with any of MEOK's 38 governance MCPs (EU AI Act, DORA, NIS2, CRA, GDPR, ISO 42001, etc.) for full compliance coverage.
