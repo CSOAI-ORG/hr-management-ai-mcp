@@ -1,0 +1,23 @@
+{
+  "acpVersion": "0.1",
+  "agent": {
+    "name": "hr-management-ai-mcp",
+    "description": "Hr Management Ai MCP Server by MEOK AI Labs",
+    "version": "1.0.6",
+    "provider": "MEOK AI Labs",
+    "interfaces": [
+      {
+        "type": "mcp",
+        "transport": "stdio",
+        "package": "hr-management-ai-mcp"
+      }
+    ],
+    "capabilities": [
+      "leave_calculator",
+      "payroll_estimator",
+      "performance_review",
+      "onboarding_checklist",
+      "compliance_checker"
+    ]
+  }
+}

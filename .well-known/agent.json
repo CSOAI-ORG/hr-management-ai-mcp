@@ -1,0 +1,68 @@
+{
+  "name": "hr-management-ai-mcp",
+  "description": "Hr Management Ai MCP Server by MEOK AI Labs",
+  "url": "https://proofof.ai/scorecard/hr-management-ai-mcp.html",
+  "version": "1.0.6",
+  "protocolVersion": "0.2.0",
+  "provider": {
+    "organization": "MEOK AI Labs",
+    "url": "https://meok.ai"
+  },
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false
+  },
+  "defaultInputModes": [
+    "text"
+  ],
+  "defaultOutputModes": [
+    "text"
+  ],
+  "skills": [
+    {
+      "id": "leave_calculator",
+      "name": "Leave Calculator",
+      "description": "leave_calculator via hr-management-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "payroll_estimator",
+      "name": "Payroll Estimator",
+      "description": "payroll_estimator via hr-management-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "performance_review",
+      "name": "Performance Review",
+      "description": "performance_review via hr-management-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "onboarding_checklist",
+      "name": "Onboarding Checklist",
+      "description": "onboarding_checklist via hr-management-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "compliance_checker",
+      "name": "Compliance Checker",
+      "description": "compliance_checker via hr-management-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    }
+  ]
+}
