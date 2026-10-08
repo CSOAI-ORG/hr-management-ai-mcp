@@ -30,7 +30,7 @@ async def server_card(request: Request) -> Response:
         {
             "$schema": "https://schema.smithery.ai/server-card.json",
             "version": "1.0.0",
-            "protocolVersion": "2025-11-25",
+            "protocolVersion": "2026-07-28",
             "serverInfo": {
                 "name": SERVICE_NAME,
                 "description": f"MEOK AI Labs — {SERVICE_NAME}",
@@ -59,7 +59,7 @@ async def server_card(request: Request) -> Response:
 async def mcp_manifest(request: Request) -> Response:
     return JSONResponse(
         {
-            "mcp_version": "2025-11-25",
+            "mcp_version": "2026-07-28",
             "endpoints": [
                 {
                     "type": "streamable-http",
