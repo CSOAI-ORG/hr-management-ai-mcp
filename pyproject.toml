@@ -9,7 +9,7 @@ description = "Hr Management Ai MCP server. Tools: leave calculator, payroll est
 license = {file = "LICENSE"}
 requires-python = ">=3.10"
 authors = [{name = "MEOK AI Labs", email = "nicholas@meok.ai"}]
-dependencies = ["mcp>=1.0.0"]
+dependencies = ["mcp>=2.0.0"]
 keywords = ["mcp", "ai", "meok", "management"]
 classifiers = [
     "Programming Language :: Python :: 3",
